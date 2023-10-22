@@ -1,0 +1,6 @@
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\Entity\bin\Debug\Entity.dll
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\Entity\bin\Debug\Entity.pdb
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\Entity\obj\Debug\Entity.dll
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\Entity\obj\Debug\Entity.pdb

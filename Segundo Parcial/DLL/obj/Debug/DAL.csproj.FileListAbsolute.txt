@@ -1,0 +1,9 @@
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\bin\Debug\DLL.dll
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\bin\Debug\DLL.pdb
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\bin\Debug\Entity.dll
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\bin\Debug\Entity.pdb
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\obj\Debug\DLL.dll
+C:\Users\POWER I5\OneDrive\Escritorio\Segundo Parcial\DLL\obj\Debug\DLL.pdb
