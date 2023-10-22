@@ -32,10 +32,34 @@ namespace GUI
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Empleado empleado = new Empleado();
-            empleado.Id = int.Parse(txtId.Text);
-            empleado.NombreEmpleado = txtNombreEmpleado.Text;
-            empleado.SalarioBase = double.Parse(txtSalarioBase.Text);
-
+            bool confirmacion = true;
+            if (int.Parse(txtId.Text)!= null)
+            {
+                empleado.Id = int.Parse(txtId.Text);
+            }
+            else
+            {
+                MessageBox.Show("El campo de IDENTIFICACION no puede estar vacio");
+                confirmacion=false;
+            }
+            if (txtNombreEmpleado.Text!= null)
+            {
+                empleado.NombreEmpleado = txtNombreEmpleado.Text;
+            }
+            else
+            {
+                MessageBox.Show("El campo de NOMBRES no puede estar vacio");
+                confirmacion = false;
+            }
+            if (double.Parse(txtSalarioBase.Text) != null)
+            {
+                empleado.SalarioBase = double.Parse(txtSalarioBase.Text);
+            }
+            else
+            {
+                MessageBox.Show("El campo de SALARIO no puede estar vacio");
+                confirmacion = false;
+            }
             if (cbEstado.Text=="Activo")
             {
                 empleado.EstadoEmpleado = true;
@@ -49,10 +73,18 @@ namespace GUI
                 else
                 {
                     MessageBox.Show("El campo de ESTADO del EMPLEADO no debe estar vacio...");
+                    confirmacion = false;
                 }
             }
-            Guardar(empleado);
+            if (confirmacion == true)
+            {
+                Guardar(empleado);
+            }else
+            {
+                MessageBox.Show("No se pudo crear el EMPLEADO");
+            }            
             CargarGrilla(servicioEmpleado.Consultar());
+            CargarEmpleados();
         }
 
         void Guardar(Empleado empleado)
@@ -88,6 +120,7 @@ namespace GUI
         {
             Eliminar(servicioEmpleado.BuscarporNombre(listaEmpleados.SelectedValue.ToString()));
             CargarGrilla(servicioEmpleado.Consultar());
+            CargarEmpleados();
         }
 
         void Eliminar(Empleado empleado)
@@ -135,5 +168,18 @@ namespace GUI
                 e.Handled = true;
             }
         }
+
+        private void FrmEmpleado_Load(object sender, EventArgs e)
+        {
+            CargarGrilla(servicioEmpleado.Consultar());
+            CargarEmpleados();
+        }
+        void CargarEmpleados()
+        {
+            listaEmpleados.DataSource = servicioEmpleado.Consultar();
+            listaEmpleados.ValueMember = "Id";
+            listaEmpleados.DisplayMember = "NombreEmpleado";
+        }
+
     }
 }

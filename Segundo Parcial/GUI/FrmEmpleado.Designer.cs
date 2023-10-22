@@ -55,6 +55,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,6 +107,9 @@
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
             this.cbEstado.Location = new System.Drawing.Point(141, 166);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(133, 21);
@@ -285,6 +289,7 @@
             // 
             // txtFiltro
             // 
+            this.txtFiltro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtFiltro.Location = new System.Drawing.Point(158, 17);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(133, 20);
@@ -300,7 +305,8 @@
             this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4});
             this.dgvEmpleados.Location = new System.Drawing.Point(23, 46);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
@@ -312,21 +318,25 @@
             this.Column1.HeaderText = "Identificacion";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 130;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre Completo";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 130;
+            this.Column2.Width = 120;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Salario";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 130;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Estado";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // FrmEmpleado
             // 
@@ -336,6 +346,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmEmpleado";
             this.Text = "Empleados";
+            this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -373,10 +384,11 @@
         private System.Windows.Forms.TextBox txtSalarioBase;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
 
